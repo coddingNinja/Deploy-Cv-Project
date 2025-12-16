@@ -1,3 +1,3 @@
 #!/bin/bash
 cd server
-python3 app.py
+python app.py
