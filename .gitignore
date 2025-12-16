@@ -5,3 +5,6 @@
 Readme.pdf
 /server/__pycache__
 /MainFile.ipynb
+/models/*
+Procfile
+start.sh
