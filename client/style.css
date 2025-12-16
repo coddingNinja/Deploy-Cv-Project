@@ -1,0 +1,47 @@
+body {
+    background: #0f172a;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    padding: 20px;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+.box {
+    background: #020617;
+    border-radius: 12px;
+    padding: 20px;
+    width: 400px;
+}
+video {
+    border: 2px solid #334155;
+    border-radius: 10px;
+}
+.result {
+    margin-top: 15px;
+    padding: 10px;
+    background: #1e293b;
+    border-radius: 8px;
+}
+.result p {
+    margin: 5px 0;
+}
+button {
+    margin-top: 10px;
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}

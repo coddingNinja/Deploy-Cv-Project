@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poker Hand Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>🃏 Poker Hand Detection</h1>
+
+    <div class="container">
+        <div class="box">
+            <h3>Live Camera</h3>
+            <video id="video" autoplay playsinline width="400"></video>
+            <div class="result">
+                <p>Detected Hand: <span id="hand">No result yet</span></p>
+                <p>Detected Cards: <span id="cards">None</span></p>
+            </div>
+        </div>
+
+        <div class="box">
+            <h3>Upload Image</h3>
+            <input type="file" id="fileInput" accept="image/*">
+            <button id="uploadBtn">Detect Hand</button>
+            <div class="result">
+                <p>Detected Hand: <span id="uploadHand">No result yet</span></p>
+                <p>Detected Cards: <span id="uploadCards">None</span></p>
+            </div>
+        </div>
+    </div>
+
+<script src="{{ url_for('static', filename='camera.js') }}"></script>
+</body>
+</html>
