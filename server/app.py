@@ -9,7 +9,6 @@ import os
 
 app = Flask(__name__, template_folder='../client', static_folder='../client')
 
-# Load model
 model = YOLO(os.path.join("models", "playingCards.pt"))
 
 classNames = [
@@ -27,7 +26,6 @@ def index():
 @app.route('/detect', methods=['POST'])
 def detect():
     data = request.json['image']
-    # Convert base64 image to numpy array
     img_data = re.sub('^data:image/.+;base64,', '', data)
     nparr = np.frombuffer(base64.b64decode(img_data), np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
