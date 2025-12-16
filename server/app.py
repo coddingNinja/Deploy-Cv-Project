@@ -9,7 +9,15 @@ import os
 
 app = Flask(__name__, template_folder='../client', static_folder='../client')
 
-model = YOLO(os.path.join("models", "playingCards.pt"))
+model = None
+
+def get_model():
+    global model
+    if model is None:
+        model = YOLO("server/models/playingCards.pt")
+    return model
+
+# model = YOLO(os.path.join("models", "playingCards.pt"))
 
 classNames = [
     '10C','10D','10H','10S','2C','2D','2H','2S','3C','3D','3H','3S',
@@ -29,6 +37,7 @@ def detect():
     img_data = re.sub('^data:image/.+;base64,', '', data)
     nparr = np.frombuffer(base64.b64decode(img_data), np.uint8)
     img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
+    model = get_model()
 
     results = model(img)
     detected = []
