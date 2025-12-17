@@ -30,6 +30,7 @@ def get_model():
     global model
     if model is None:
         model = YOLO(MODEL_PATH)
+        model.to("cpu")
     return model
 
 # ---------------------------
