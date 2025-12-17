@@ -3,8 +3,10 @@ gunicorn==23.0.0
 
 numpy<2
 opencv-python-headless==4.9.0.80
+Pillow
+requests
 
-ultralytics
+ultralytics==8.3.239
 
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.2.2+cpu
