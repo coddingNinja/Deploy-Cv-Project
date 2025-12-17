@@ -1,11 +1,10 @@
 flask==3.0.3
 gunicorn==23.0.0
 
-numpy==1.26.4
+numpy<2
 opencv-python-headless==4.9.0.80
 
-ultralytics==8.2.48
-gdown
+ultralytics
 
 --extra-index-url https://download.pytorch.org/whl/cpu
 torch==2.2.2+cpu
