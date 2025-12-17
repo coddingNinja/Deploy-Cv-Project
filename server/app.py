@@ -7,7 +7,8 @@ import base64
 import re
 import os
 import gdown  # for downloading from Google Drive
-
+cv2.ocl.setUseOpenCL(False)  # Disable OpenCL
+cv2.setNumThreads(0) 
 app = Flask(__name__, template_folder='../client', static_folder='../client')
 
 # ---------------------------
